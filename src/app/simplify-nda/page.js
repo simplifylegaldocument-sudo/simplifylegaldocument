@@ -1,12 +1,12 @@
+
+"use client";
+
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import DocumentInput from "@/components/DocumentInput";
 import Footer from "@/components/Footer";
 
-export const metadata = {
-  title: "Simplify NDA (Non-Disclosure Agreement) - Plain English Summary",
-  description: "Understand your NDA instantly. Paste your Non-Disclosure Agreement and get a clear, plain-English breakdown of your obligations and risks.",
-};
+
 
 export default function NDAPage() {
   return (
@@ -19,7 +19,7 @@ export default function NDAPage() {
             <p className="text-muted max-w-2xl mx-auto">Non-Disclosure Agreements can be tricky. Use our AI to understand exactly what information you're protecting and for how long.</p>
           </div>
         </section>
-        
+
         <DocumentInput onSimplify={(data) => {
           // In a real app, this would redirect to results or show them here
           // For the MVP, the Home page handles the state, so this is just a landing page
