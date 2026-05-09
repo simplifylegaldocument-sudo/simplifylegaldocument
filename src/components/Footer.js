@@ -25,9 +25,9 @@ export default function Footer() {
             <h4 className="font-bold mb-6">Product</h4>
             <ul className="space-y-4 text-sm text-muted">
               <li><Link href="/#features" className="hover:text-primary transition-colors">Features</Link></li>
-              <li><Link href="/#how-it-works" className="hover:text-primary transition-colors">How it works</Link></li>
-
-              <li><Link href="/api-docs" className="hover:text-primary transition-colors">API Docs</Link></li>
+              <li><Link href="/blog" className="hover:text-primary transition-colors">Blog & Articles</Link></li>
+              <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
             </ul>
           </div>
           
@@ -35,9 +35,8 @@ export default function Footer() {
             <h4 className="font-bold mb-6">Legal</h4>
             <ul className="space-y-4 text-sm text-muted">
               <li><Link href="/disclaimer" className="hover:text-primary transition-colors">Disclaimer</Link></li>
-              <li><Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
               <li><Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link></li>
-              <li><Link href="/cookies" className="hover:text-primary transition-colors">Cookie Policy</Link></li>
             </ul>
           </div>
         </div>
