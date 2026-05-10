@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FAQ from "@/components/FAQ";
 
 export const metadata = {
   title: "About Us | simplifylegaldocument",
@@ -11,6 +12,7 @@ export default function AboutPage() {
     <main className="min-h-screen">
       <Navbar />
       <div className="pt-32 pb-24 max-w-4xl mx-auto px-6">
+        {/* Existing content... */}
         <h1 className="text-5xl font-serif font-bold mb-8">About <span className="text-primary">simplifylegaldocument</span></h1>
         
         <div className="prose prose-lg dark:prose-invert">
@@ -49,6 +51,30 @@ export default function AboutPage() {
           </p>
         </div>
       </div>
+
+      <FAQ faqs={[
+        {
+          question: "What is the mission of PlainLaw?",
+          answer: "PlainLaw's mission is to democratize legal information by making it accessible to everyone. We believe that legal clarity shouldn't be hidden behind expensive paywalls or complex jargon."
+        },
+        {
+          question: "Who built the PlainLaw legal document simplifier?",
+          answer: "PlainLaw was built by a team of developers and legal enthusiasts who wanted to bridge the gap between complex law and everyday understanding using the power of Generative AI."
+        },
+        {
+          question: "Is PlainLaw a law firm?",
+          answer: "No, PlainLaw is an AI-powered technology platform. We provide automated document analysis and simplification, but we do not provide legal representation or professional legal advice."
+        },
+        {
+          question: "How does PlainLaw stay up to date with legal trends?",
+          answer: "Our AI models are trained on vast datasets and are constantly updated to reflect modern legal standards and 'plain English' best practices in document drafting."
+        },
+        {
+          question: "Why is plain English important in law?",
+          answer: "Plain English ensures that all parties in a contract truly understand their rights and obligations. This reduces disputes, builds trust, and makes the legal system fairer for everyone."
+        }
+      ]} />
+
       <Footer />
     </main>
   );

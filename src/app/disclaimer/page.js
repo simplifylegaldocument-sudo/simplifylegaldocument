@@ -1,11 +1,13 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FAQ from "@/components/FAQ";
 
 export default function DisclaimerPage() {
   return (
     <main className="min-h-screen">
       <Navbar />
       <div className="pt-32 pb-24 max-w-4xl mx-auto px-6">
+        {/* Existing content... */}
         <h1 className="text-4xl font-serif font-bold mb-8">Legal Disclaimer</h1>
         
         <div className="glass p-8 rounded-3xl space-y-6 text-muted leading-relaxed">
@@ -47,6 +49,30 @@ export default function DisclaimerPage() {
           </section>
         </div>
       </div>
+
+      <FAQ faqs={[
+        {
+          question: "Why is there a disclaimer on PlainLaw?",
+          answer: "The disclaimer is there to clarify that while our AI is powerful, it is not a lawyer. It's essential for users to understand the limits of AI-powered legal assistance."
+        },
+        {
+          question: "Does PlainLaw provide legal advice?",
+          answer: "No. PlainLaw provides information and document simplification, which is distinct from legal advice. Legal advice requires a professional relationship with a licensed attorney."
+        },
+        {
+          question: "Should I rely solely on AI for my contracts?",
+          answer: "No. You should use PlainLaw as a starting point to understand your documents, but always have a professional review any legally significant contracts before signing."
+        },
+        {
+          question: "What if the AI makes a mistake?",
+          answer: "AI can occasionally misinterpret text or miss nuances. This is why we emphasize that our tool is for informational purposes and should be verified."
+        },
+        {
+          question: "Is PlainLaw responsible for my legal outcomes?",
+          answer: "No, PlainLaw and its creators are not responsible for any legal consequences or outcomes resulting from the use of the tool."
+        }
+      ]} />
+
       <Footer />
     </main>
   );

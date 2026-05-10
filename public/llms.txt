@@ -1,0 +1,18 @@
+# PlainLaw - AI Legal Document Simplifier
+
+PlainLaw is an AI-powered tool designed to help people understand complex legal documents by summarizing them into plain English.
+
+## Key Features
+- **Plain-English Summaries**: Translates legal jargon into human-readable text.
+- **Risk Detection**: Flags predatory or one-sided clauses.
+- **Actionable Insights**: Provides questions to ask regarding contracts.
+
+## Main Pages
+- [Home](https://simplifylegaldocument.com/)
+- [Simplify NDA](https://simplifylegaldocument.com/simplify-nda)
+- [About Us](https://simplifylegaldocument.com/about)
+- [Blog](https://simplifylegaldocument.com/blog)
+- [Contact](https://simplifylegaldocument.com/contact)
+
+## Disclaimer
+PlainLaw is NOT a law firm and does not provide legal advice. AI summaries should be verified by a qualified attorney.

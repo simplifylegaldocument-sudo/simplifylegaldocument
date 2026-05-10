@@ -5,14 +5,14 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import DocumentInput from "@/components/DocumentInput";
 import Footer from "@/components/Footer";
-
-
+import FAQ from "@/components/FAQ";
 
 export default function NDAPage() {
   return (
     <main className="min-h-screen">
       <Navbar />
       <div className="pt-24">
+        {/* Existing content... */}
         <section className="bg-primary/5 py-16 border-b border-border">
           <div className="max-w-7xl mx-auto px-6 text-center">
             <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6">Simplify your <span className="text-primary italic">NDA</span></h1>
@@ -21,9 +21,6 @@ export default function NDAPage() {
         </section>
 
         <DocumentInput onSimplify={(data) => {
-          // In a real app, this would redirect to results or show them here
-          // For the MVP, the Home page handles the state, so this is just a landing page
-          // that funnels to the main tool.
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }} />
 
@@ -41,6 +38,30 @@ export default function NDAPage() {
           </ul>
         </section>
       </div>
+
+      <FAQ faqs={[
+        {
+          question: "Why should I use an NDA summarizer?",
+          answer: "An NDA summarizer helps you quickly identify the most important terms in a Non-Disclosure Agreement, such as the duration of confidentiality, the definition of confidential information, and penalties for breach."
+        },
+        {
+          question: "What are common risks in an NDA?",
+          answer: "Common risks in an NDA include overly broad definitions of 'confidential information,' indefinite duration of secrecy, and one-sided indemnity clauses. PlainLaw flags these automatically for your review."
+        },
+        {
+          question: "How do I understand legal jargon in my NDA?",
+          answer: "Legal jargon like 'liquidated damages,' 'indemnification,' and 'non-solicitation' can be confusing. PlainLaw translates these terms into everyday language so you know exactly what your obligations are."
+        },
+        {
+          question: "Is it safe to paste my NDA into an AI tool?",
+          answer: "At PlainLaw, we prioritize your privacy. We do not store your documents permanently, and your data is used solely for the purpose of simplification. Always ensure you are using a secure, trusted platform."
+        },
+        {
+          question: "Can AI help me negotiate my NDA?",
+          answer: "Yes! By identifying unfair or one-sided terms, PlainLaw provides you with the knowledge needed to ask the right questions and negotiate better terms before signing your NDA."
+        }
+      ]} />
+
       <Footer />
     </main>
   );

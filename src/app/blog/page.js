@@ -2,9 +2,10 @@
 import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FAQ from "@/components/FAQ";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Calendar, User, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const STATIC_POSTS = [
   {
@@ -43,7 +44,6 @@ export default function BlogPage() {
   const [posts, setPosts] = useState(STATIC_POSTS);
 
   useEffect(() => {
-    // Load dynamic posts from localStorage if they exist
     const savedPosts = localStorage.getItem("blog_posts");
     if (savedPosts) {
       try {
@@ -82,7 +82,6 @@ export default function BlogPage() {
               transition={{ delay: index * 0.1 }}
               className="glass rounded-[2.5rem] flex flex-col overflow-hidden hover:border-primary/40 transition-all group border border-border/50"
             >
-              {/* Image Container */}
               <div className="aspect-[16/9] overflow-hidden bg-muted relative">
                 {post.image ? (
                   <img 
@@ -135,6 +134,30 @@ export default function BlogPage() {
           ))}
         </div>
       </div>
+
+      <FAQ faqs={[
+        {
+          question: "What topics does the PlainLaw blog cover?",
+          answer: "Our blog covers a wide range of topics including legal technology, AI advancements, tips for understanding contracts, and news about PlainLaw features."
+        },
+        {
+          question: "Is the legal information on this blog accurate?",
+          answer: "We strive to provide accurate and helpful information, but blog posts are for educational purposes and should not be taken as legal advice."
+        },
+        {
+          question: "How often is the blog updated?",
+          answer: "We update our blog regularly with new insights and guides to help you navigate the legal landscape more effectively."
+        },
+        {
+          question: "Can I contribute to the PlainLaw blog?",
+          answer: "We are always looking for guest contributors who are passionate about legal accessibility. Contact us if you're interested in writing for us."
+        },
+        {
+          question: "How can I stay updated on new blog posts?",
+          answer: "You can stay updated by following us on social media or checking back here regularly for the latest articles."
+        }
+      ]} />
+
       <Footer />
     </main>
   );
