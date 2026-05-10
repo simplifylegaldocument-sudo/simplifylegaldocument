@@ -24,7 +24,7 @@ export default function ContactPage() {
             <div className="space-y-6">
               <div>
                 <h3 className="font-bold text-lg mb-1">Email Us</h3>
-                <p className="text-primary hover:underline cursor-pointer">support@simplifylegaldocument.com</p>
+                <p className="text-primary hover:underline cursor-pointer">support@simplifylegaldocument.online</p>
               </div>
               
               <div>

@@ -8,11 +8,11 @@ PlainLaw is an AI-powered tool designed to help people understand complex legal 
 - **Actionable Insights**: Provides questions to ask regarding contracts.
 
 ## Main Pages
-- [Home](https://simplifylegaldocument.com/)
-- [Simplify NDA](https://simplifylegaldocument.com/simplify-nda)
-- [About Us](https://simplifylegaldocument.com/about)
-- [Blog](https://simplifylegaldocument.com/blog)
-- [Contact](https://simplifylegaldocument.com/contact)
+- [Home](https://simplifylegaldocument.online/)
+- [Simplify NDA](https://simplifylegaldocument.online/simplify-nda)
+- [About Us](https://simplifylegaldocument.online/about)
+- [Blog](https://simplifylegaldocument.online/blog)
+- [Contact](https://simplifylegaldocument.online/contact)
 
 ## Disclaimer
 PlainLaw is NOT a law firm and does not provide legal advice. AI summaries should be verified by a qualified attorney.

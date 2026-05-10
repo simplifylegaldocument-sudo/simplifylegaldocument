@@ -56,7 +56,7 @@ export default function TermsPage() {
           
           <section className="mb-10">
             <h2 className="text-2xl font-bold mb-4">8. Contact</h2>
-            <p>For questions regarding these terms, contact us at legal@simplifylegaldocument.com.</p>
+            <p>For questions regarding these terms, contact us at legal@simplifylegaldocument.online.</p>
           </section>
         </div>
       </div>

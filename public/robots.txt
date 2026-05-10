@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://simplifylegaldocument.com/sitemap.xml
+Sitemap: https://simplifylegaldocument.online/sitemap.xml
 
 User-agent: GPTBot
 Allow: /

@@ -61,7 +61,7 @@ export default function PrivacyPolicyPage() {
           
           <section className="mb-10">
             <h2 className="text-2xl font-bold mb-4">7. Contact Us</h2>
-            <p>If you have any questions about this Privacy Policy, please contact us at privacy@simplifylegaldocument.com.</p>
+            <p>If you have any questions about this Privacy Policy, please contact us at privacy@simplifylegaldocument.online.</p>
           </section>
         </div>
       </div>
