@@ -137,8 +137,8 @@ export default function BlogPage() {
 
       <FAQ faqs={[
         {
-          question: "What topics does the PlainLaw blog cover?",
-          answer: "Our blog covers a wide range of topics including legal technology, AI advancements, tips for understanding contracts, and news about PlainLaw features."
+          question: "What topics does the simplifylegaldocument blog cover?",
+          answer: "Our blog covers a wide range of topics including legal technology, AI advancements, tips for understanding contracts, and news about simplifylegaldocument features."
         },
         {
           question: "Is the legal information on this blog accurate?",
@@ -149,7 +149,7 @@ export default function BlogPage() {
           answer: "We update our blog regularly with new insights and guides to help you navigate the legal landscape more effectively."
         },
         {
-          question: "Can I contribute to the PlainLaw blog?",
+          question: "Can I contribute to the simplifylegaldocument blog?",
           answer: "We are always looking for guest contributors who are passionate about legal accessibility. Contact us if you're interested in writing for us."
         },
         {

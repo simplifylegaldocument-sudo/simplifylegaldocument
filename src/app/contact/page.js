@@ -62,8 +62,8 @@ export default function ContactPage() {
 
       <FAQ faqs={[
         {
-          question: "How can I get support for PlainLaw?",
-          answer: "If you encounter any issues or have questions about our document simplifier, you can contact our support team through the form on this page or email us directly at support@plainlaw.ai."
+          question: "How can I get support for simplifylegaldocument?",
+          answer: "If you encounter any issues or have questions about our document simplifier, you can contact our support team through the form on this page or email us directly at support@simplifylegaldocument.ai."
         },
         {
           question: "Can I request a feature for the AI simplifier?",
@@ -78,7 +78,7 @@ export default function ContactPage() {
           answer: "We aim to respond to all inquiries within 24-48 business hours. Thank you for your patience as our small team works to help you."
         },
         {
-          question: "Where can I find legal help if PlainLaw isn't enough?",
+          question: "Where can I find legal help if simplifylegaldocument isn't enough?",
           answer: "If you need specific legal advice, we recommend contacting your local Bar Association or a qualified attorney in your jurisdiction."
         }
       ]} />

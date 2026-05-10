@@ -63,23 +63,23 @@ export default function TermsPage() {
 
       <FAQ faqs={[
         {
-          question: "What are the rules for using PlainLaw?",
-          answer: "By using PlainLaw, you agree to use the tool for informational purposes only. You must not use the tool for any illegal activities or to generate misleading content."
+          question: "What are the rules for using simplifylegaldocument?",
+          answer: "By using simplifylegaldocument, you agree to use the tool for informational purposes only. You must not use the tool for any illegal activities or to generate misleading content."
         },
         {
           question: "Is the AI summary legally binding?",
-          answer: "No, the summaries provided by PlainLaw are for educational purposes and are not legally binding. The original document you are simplifying remains the legal source of truth."
+          answer: "No, the summaries provided by simplifylegaldocument are for educational purposes and are not legally binding. The original document you are simplifying remains the legal source of truth."
         },
         {
-          question: "What is the limitation of liability for PlainLaw?",
-          answer: "PlainLaw is provided 'as is' without any warranties. We are not liable for any decisions made based on the AI-generated summaries."
+          question: "What is the limitation of liability for simplifylegaldocument?",
+          answer: "simplifylegaldocument is provided 'as is' without any warranties. We are not liable for any decisions made based on the AI-generated summaries."
         },
         {
-          question: "Can I use PlainLaw for commercial purposes?",
+          question: "Can I use simplifylegaldocument for commercial purposes?",
           answer: "Currently, our tool is available for personal and general business use. For high-volume commercial needs, please contact us for custom licensing."
         },
         {
-          question: "How are disputes handled with PlainLaw?",
+          question: "How are disputes handled with simplifylegaldocument?",
           answer: "Any disputes related to our services are governed by the laws of our jurisdiction and should be resolved through the procedures outlined in our Terms of Service."
         }
       ]} />

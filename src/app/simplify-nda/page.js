@@ -46,19 +46,19 @@ export default function NDAPage() {
         },
         {
           question: "What are common risks in an NDA?",
-          answer: "Common risks in an NDA include overly broad definitions of 'confidential information,' indefinite duration of secrecy, and one-sided indemnity clauses. PlainLaw flags these automatically for your review."
+          answer: "Common risks in an NDA include overly broad definitions of 'confidential information,' indefinite duration of secrecy, and one-sided indemnity clauses. simplifylegaldocument flags these automatically for your review."
         },
         {
           question: "How do I understand legal jargon in my NDA?",
-          answer: "Legal jargon like 'liquidated damages,' 'indemnification,' and 'non-solicitation' can be confusing. PlainLaw translates these terms into everyday language so you know exactly what your obligations are."
+          answer: "Legal jargon like 'liquidated damages,' 'indemnification,' and 'non-solicitation' can be confusing. simplifylegaldocument translates these terms into everyday language so you know exactly what your obligations are."
         },
         {
           question: "Is it safe to paste my NDA into an AI tool?",
-          answer: "At PlainLaw, we prioritize your privacy. We do not store your documents permanently, and your data is used solely for the purpose of simplification. Always ensure you are using a secure, trusted platform."
+          answer: "At simplifylegaldocument, we prioritize your privacy. We do not store your documents permanently, and your data is used solely for the purpose of simplification. Always ensure you are using a secure, trusted platform."
         },
         {
           question: "Can AI help me negotiate my NDA?",
-          answer: "Yes! By identifying unfair or one-sided terms, PlainLaw provides you with the knowledge needed to ask the right questions and negotiate better terms before signing your NDA."
+          answer: "Yes! By identifying unfair or one-sided terms, simplifylegaldocument provides you with the knowledge needed to ask the right questions and negotiate better terms before signing your NDA."
         }
       ]} />
 

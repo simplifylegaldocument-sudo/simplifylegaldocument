@@ -54,19 +54,19 @@ export default function AboutPage() {
 
       <FAQ faqs={[
         {
-          question: "What is the mission of PlainLaw?",
-          answer: "PlainLaw's mission is to democratize legal information by making it accessible to everyone. We believe that legal clarity shouldn't be hidden behind expensive paywalls or complex jargon."
+          question: "What is the mission of simplifylegaldocument?",
+          answer: "simplifylegaldocument's mission is to democratize legal information by making it accessible to everyone. We believe that legal clarity shouldn't be hidden behind expensive paywalls or complex jargon."
         },
         {
-          question: "Who built the PlainLaw legal document simplifier?",
-          answer: "PlainLaw was built by a team of developers and legal enthusiasts who wanted to bridge the gap between complex law and everyday understanding using the power of Generative AI."
+          question: "Who built the simplifylegaldocument legal document simplifier?",
+          answer: "simplifylegaldocument was built by a team of developers and legal enthusiasts who wanted to bridge the gap between complex law and everyday understanding using the power of Generative AI."
         },
         {
-          question: "Is PlainLaw a law firm?",
-          answer: "No, PlainLaw is an AI-powered technology platform. We provide automated document analysis and simplification, but we do not provide legal representation or professional legal advice."
+          question: "Is simplifylegaldocument a law firm?",
+          answer: "No, simplifylegaldocument is an AI-powered technology platform. We provide automated document analysis and simplification, but we do not provide legal representation or professional legal advice."
         },
         {
-          question: "How does PlainLaw stay up to date with legal trends?",
+          question: "How does simplifylegaldocument stay up to date with legal trends?",
           answer: "Our AI models are trained on vast datasets and are constantly updated to reflect modern legal standards and 'plain English' best practices in document drafting."
         },
         {

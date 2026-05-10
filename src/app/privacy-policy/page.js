@@ -67,15 +67,15 @@ export default function PrivacyPolicyPage() {
       </div>
       <FAQ faqs={[
         {
-          question: "Is my data safe with PlainLaw?",
+          question: "Is my data safe with simplifylegaldocument?",
           answer: "Yes, we implement industry-standard security measures to protect your data. Documents pasted into our tool are processed and then discarded according to our data retention policy."
         },
         {
-          question: "Does PlainLaw sell my personal information?",
+          question: "Does simplifylegaldocument sell my personal information?",
           answer: "No, we do not sell your personal information or the content of your documents to third parties. Your privacy is our top priority."
         },
         {
-          question: "What information does PlainLaw collect?",
+          question: "What information does simplifylegaldocument collect?",
           answer: "We collect minimal information necessary to provide our service, such as basic usage analytics and any information you provide voluntarily via our contact forms."
         },
         {
@@ -83,7 +83,7 @@ export default function PrivacyPolicyPage() {
           answer: "Document text is processed through secure AI models to generate summaries. We use encryption during transmission to ensure your data remains private."
         },
         {
-          question: "Can I delete my data from PlainLaw?",
+          question: "Can I delete my data from simplifylegaldocument?",
           answer: "Since we do not store document content persistently, there is no data to delete in most cases. For any other personal data, you can request deletion by contacting us."
         }
       ]} />

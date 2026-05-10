@@ -82,7 +82,7 @@ export default function Home() {
       <FAQ faqs={[
         {
           question: "What is a legal document simplifier?",
-          answer: "A legal document simplifier is an AI-powered tool that translates complex legal jargon and dense contracts into plain English. PlainLaw uses advanced generative AI to help you understand what you're signing without needing a law degree."
+          answer: "A legal document simplifier is an AI-powered tool that translates complex legal jargon and dense contracts into plain English. simplifylegaldocument uses advanced generative AI to help you understand what you're signing without needing a law degree."
         },
         {
           question: "How does AI legal analysis work?",
@@ -90,15 +90,15 @@ export default function Home() {
         },
         {
           question: "Can I simplify an NDA online for free?",
-          answer: "Yes, PlainLaw allows you to simplify NDAs and other contracts online. Our tool is designed to provide quick, accessible legal clarity for everyone, from employees to small business owners."
+          answer: "Yes, simplifylegaldocument allows you to simplify NDAs and other contracts online. Our tool is designed to provide quick, accessible legal clarity for everyone, from employees to small business owners."
         },
         {
           question: "Is an AI legal assistant accurate?",
           answer: "While our AI legal assistant is highly advanced and provides accurate summaries of legal text, it is not a replacement for professional legal advice from a qualified attorney. Always consult a lawyer for critical legal decisions."
         },
         {
-          question: "What types of documents can PlainLaw simplify?",
-          answer: "PlainLaw can simplify a wide range of documents including NDAs, employment contracts, rental agreements, terms of service, and privacy policies. Simply paste your text to receive a plain English breakdown."
+          question: "What types of documents can simplifylegaldocument simplify?",
+          answer: "simplifylegaldocument can simplify a wide range of documents including NDAs, employment contracts, rental agreements, terms of service, and privacy policies. Simply paste your text to receive a plain English breakdown."
         }
       ]} />
 
