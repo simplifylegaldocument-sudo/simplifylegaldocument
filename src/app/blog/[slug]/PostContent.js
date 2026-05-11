@@ -43,27 +43,38 @@ export default function PostContent({ slug }) {
       setPost(staticPost);
       setLoading(false);
     } else {
-      // 2. Check localStorage for user-uploaded posts
-      try {
-        const savedPosts = JSON.parse(localStorage.getItem("blog_posts") || "[]");
-        const dynamicPost = savedPosts.find(p => p.slug === slug);
-        if (dynamicPost) {
-          setPost(dynamicPost);
+      // 2. Check Supabase for user-uploaded posts via API
+      const fetchDynamicPost = async () => {
+        try {
+          const response = await fetch("/api/blog");
+          const allPosts = await response.json();
+          const dynamicPost = allPosts.find(p => p.slug === slug);
           
-          // Update Document Title for SEO/Browser
-          if (dynamicPost.metaTitle) {
-            document.title = `${dynamicPost.metaTitle} | simplifylegaldocument`;
+          if (dynamicPost) {
+            // Map DB snake_case back to UI camelCase
+            const mappedPost = {
+              ...dynamicPost,
+              metaTitle: dynamicPost.meta_title,
+              metaDescription: dynamicPost.meta_description
+            };
+            setPost(mappedPost);
+            
+            // Update Document Title for SEO/Browser
+            if (mappedPost.metaTitle) {
+              document.title = `${mappedPost.metaTitle} | simplifylegaldocument`;
+            }
+            // Update Meta Description dynamically (browser only)
+            if (mappedPost.metaDescription) {
+              const metaDesc = document.querySelector('meta[name="description"]');
+              if (metaDesc) metaDesc.setAttribute('content', mappedPost.metaDescription);
+            }
           }
-          // Update Meta Description dynamically (browser only)
-          if (dynamicPost.metaDescription) {
-            const metaDesc = document.querySelector('meta[name="description"]');
-            if (metaDesc) metaDesc.setAttribute('content', dynamicPost.metaDescription);
-          }
+        } catch (e) {
+          console.error("Error fetching post from API", e);
         }
-      } catch (e) {
-        console.error("Error reading from localStorage", e);
-      }
-      setLoading(false);
+        setLoading(false);
+      };
+      fetchDynamicPost();
     }
   }, [slug]);
 

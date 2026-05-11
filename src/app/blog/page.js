@@ -44,15 +44,18 @@ export default function BlogPage() {
   const [posts, setPosts] = useState(STATIC_POSTS);
 
   useEffect(() => {
-    const savedPosts = localStorage.getItem("blog_posts");
-    if (savedPosts) {
+    const loadPosts = async () => {
       try {
-        const parsed = JSON.parse(savedPosts);
-        setPosts([...STATIC_POSTS, ...parsed]);
+        const response = await fetch("/api/blog");
+        const data = await response.json();
+        if (Array.isArray(data)) {
+          setPosts([...STATIC_POSTS, ...data]);
+        }
       } catch (e) {
-        console.error("Failed to parse saved posts", e);
+        console.error("Failed to fetch posts", e);
       }
-    }
+    };
+    loadPosts();
   }, []);
 
   return (

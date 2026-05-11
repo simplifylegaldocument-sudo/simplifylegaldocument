@@ -34,16 +34,30 @@ export default function AdminDashboard() {
     loadPosts();
   }, [router]);
 
-  const loadPosts = () => {
-    const savedPosts = JSON.parse(localStorage.getItem("blog_posts") || "[]");
-    setPosts(savedPosts);
+  const loadPosts = async () => {
+    try {
+      const response = await fetch("/api/blog");
+      const data = await response.json();
+      if (Array.isArray(data)) {
+        // Map DB snake_case back to UI camelCase
+        const mapped = data.map(p => ({
+          ...p,
+          metaTitle: p.meta_title,
+          metaDescription: p.meta_description
+        }));
+        setPosts(mapped);
+      }
+    } catch (e) {
+      console.error("Failed to load posts", e);
+    }
   };
 
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
     if (file) {
-      if (file.size > 1024 * 1024) {
-        alert("Image too large. Please use an image under 1MB for localStorage storage.");
+      // Increased limit for DB storage (Supabase handles larger files than localStorage)
+      if (file.size > 2 * 1024 * 1024) {
+        alert("Image too large. Please use an image under 2MB.");
         return;
       }
       const reader = new FileReader();
@@ -54,25 +68,38 @@ export default function AdminDashboard() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setStatus("Saving...");
     
-    const slug = form.title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
-    const date = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    const slug = form.slug || form.title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
+    const date = form.date || new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 
-    let updatedPosts;
-    if (isEditing) {
-      updatedPosts = posts.map(p => p.id === editingId ? { ...form, id: editingId, slug, date } : p);
-      setStatus("Post updated successfully!");
-    } else {
-      const newPost = { ...form, id: Date.now(), slug, date };
-      updatedPosts = [...posts, newPost];
-      setStatus("Post published successfully!");
+    const postToSave = { 
+      ...form, 
+      id: isEditing ? editingId : Date.now(), 
+      slug, 
+      date 
+    };
+
+    try {
+      const response = await fetch("/api/blog", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(postToSave)
+      });
+
+      if (response.ok) {
+        setStatus(isEditing ? "Post updated successfully!" : "Post published successfully!");
+        loadPosts();
+        resetForm();
+      } else {
+        const err = await response.json();
+        setStatus("Error: " + (err.error || "Failed to save"));
+      }
+    } catch (e) {
+      setStatus("Error saving post");
     }
-
-    localStorage.setItem("blog_posts", JSON.stringify(updatedPosts));
-    setPosts(updatedPosts);
-    resetForm();
     
     setTimeout(() => setStatus(""), 3000);
   };
@@ -84,12 +111,21 @@ export default function AdminDashboard() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleDelete = (id) => {
+  const handleDelete = async (id) => {
     if (confirm("Are you sure you want to delete this post?")) {
-      const updatedPosts = posts.filter(p => p.id !== id);
-      localStorage.setItem("blog_posts", JSON.stringify(updatedPosts));
-      setPosts(updatedPosts);
-      setStatus("Post deleted.");
+      try {
+        const response = await fetch(`/api/blog/${id}`, {
+          method: "DELETE"
+        });
+        if (response.ok) {
+          setStatus("Post deleted.");
+          loadPosts();
+        } else {
+          setStatus("Failed to delete.");
+        }
+      } catch (e) {
+        setStatus("Error deleting post");
+      }
       setTimeout(() => setStatus(""), 3000);
     }
   };
