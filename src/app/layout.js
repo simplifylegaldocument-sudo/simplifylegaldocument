@@ -23,7 +23,12 @@ export const metadata = {
     "AI lawyer",
     "legal summary",
     "plain english law",
+    "legal help",
+    "contract review",
   ],
+  other: {
+    "google-adsense-account": "ca-pub-1492697474833006",
+  },
 };
 
 export default function RootLayout({ children }) {
